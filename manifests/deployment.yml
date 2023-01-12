@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dominikcluster-7b06"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dominikcluster-7b06"
+  template:
+    metadata:
+      labels:
+        app: "dominikcluster-7b06"
+    spec:
+      containers:
+        - name: "dominikcluster-7b06"
+          image: "acrdominik.azurecr.io/dominikcluster"
+          ports:
+          - containerPort: 80
