@@ -1,6 +1,6 @@
 FROM nginx:stable
 
-# create directories
+# create directoriess
 RUN mkdir -p /usr/src/todoapp
 
 # copy files
