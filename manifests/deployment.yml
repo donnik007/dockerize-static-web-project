@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "kubedominikklust-6902"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "kubedominikklust-6902"
+  template:
+    metadata:
+      labels:
+        app: "kubedominikklust-6902"
+    spec:
+      containers:
+        - name: "kubedominikklust-6902"
+          image: "dominikrefsrt213132.azurecr.io/kubedominikklust"
+          ports:
+          - containerPort: 80
